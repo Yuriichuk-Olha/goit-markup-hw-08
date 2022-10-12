@@ -1,0 +1,89 @@
+.section-job {
+    background-color: var(--secondary-background-color);
+}
+
+.section-title {
+    background-color: var(--primary-white-color);
+}
+
+.team-user {
+    margin-bottom: 10px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+}
+
+.team-job {
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    color:var(--secondary-text-color);
+    margin-bottom: 16px;
+}
+.workers {
+    padding: 30px 0;
+}
+
+.icon-social {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+
+    &::after {
+        display: inline-flex;
+        justify-content: center;
+        position: absolute;
+        content: "";
+            
+        background: currentColor; 
+    }
+}
+
+.icon-link {
+    align-items: center;
+    justify-content: center;
+    transition: transform 250ms; 
+}
+
+.icon-shape {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+    color: var(--accent-bg-color);
+    
+    &:hover,
+    &:focus {
+        background-color:var(--accent-text-color);
+        color: var(--primary-white-color);
+    }
+}
+
+.svg-inline {
+    fill: currentColor;
+}
+
+// .icon-shape:hover,
+// .icon-shape:focus {
+//     background-color:var(--accent-text-color);
+//     color: var(--primary-white-color);
+// }
+
+// .icon-social::after {
+//     display: inline-flex;
+//     justify-content: center;
+//     position: absolute;
+//     content: "";
+        
+//     background: currentColor; 
+// }

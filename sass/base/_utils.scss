@@ -1,0 +1,37 @@
+body {
+    font-family: "roboto", sans-serif;
+    font-size: 14px;
+    color:var(--primary-text-color);
+    background-color:var(--primary-white-color);
+    letter-spacing: 0.03em;  
+}
+
+a {
+    text-decoration: none;  
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+    padding-left: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p {
+    margin: 0;
+}
+
+
+button {
+    border: none;
+}
+img {
+    display: block;
+    max-width: 100%;
+}

@@ -12,28 +12,52 @@
     overflow: hidden;
 }
 
-.container {
+
+
+.benefits,.section-job,.customers {
+    padding-top: 60px;
+
+    @media screen and(min-width:1200px) {
+        padding-top: 94px;
+    }
+}
+   
+.section-job,.customers {
+    padding-bottom: 60px;
+
+    @media screen and(min-width:1200px) {
+        padding-bottom: 94px;
+    }
+}
+@media screen and(max-width:1199px) {
+    .secon {
+        display: none;
+    }
     
-    width: 1200px;
-    margin: 0 auto;
-    padding-left: 15px;
-    padding-right: 15px;
-} 
-
-.benefits,.secon,.section-job,.customers {
-    padding-top: 94px;
 }
 
-.secon,.section-job,.customers {
-    padding-bottom: 94px;
+@media screen and(min-width:1200px) {
+        .secon {
+        padding-bottom: 94px;
+        padding-top: 94px;
+        }
 }
+
+   
 
 .title-secon  {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 
     font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
+    font-size: 28px;
+    line-height: 1.178;
     text-align: center;
     color: var(--primary-text-color);  
+
+    @media screen and(min-width:1200px) {
+        margin-bottom: 50px;
+        font-size: 36px;
+        line-height: 1.17;
+    }
+  
 }

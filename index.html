@@ -10,8 +10,6 @@
      rel="stylesheet">
      <link href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
      rel="stylesheet">
-     <!-- <link rel="stylesheet" href="./css/style.css"/> -->
-
      <link rel="stylesheet" href="./css/main.min.css"/>
 </head>
 
@@ -19,16 +17,27 @@
     <header class="header">
         <div class="header-title container">
             <nav class="header-nav">
+                <div class="hedear-mobil">
             <a href="#" class="header-logo">
                <span class="accent-logo">Web</span>Studio
             </a>
-            <ul class="navig-item">
+            <button type="button" class="button-menu js-open-menu no-scroll"
+            aria-expanded="false" aria-controls="mobile-menu">
+                <svg width="40" height="40"
+                aria-label="перемикач мобільного меню">
+                <!-- <use class="close" href="./images/symbol-defs.svg#icon-close"></use> -->
+                <use class="menu" href="./images/symbol-defs.svg#icon-menu"></use>
+                </svg>
+             </button>
+            </div>
+            <div class="header-item">
+              <ul class="navig-item">
                 <li class="navigation-item active"><a class="navigation-link current" href="#">Студія</a> </li>
                 <li class="navigation-item"><a class="navigation-link" href="./portfolio.html">Портфоліо</a> </li>
                 <li class="navigation-item"><a class="navigation-link" href="#">Контакти</a> </li>
-            </ul>
-            </nav>
-            <ul class="header-wrap">
+              </ul>
+             </nav>
+                 <ul class="header-wrap">
                         <li class="wrap-contact"><a class="header-contact" href="mailto:info@devstudio.com">
                                 <svg class="svg"
                                 width="16" height="12">
@@ -42,7 +51,8 @@
                             <use href="./images/sprite-icon.svg#icon-phone"></use>
                             </svg>
                             +38 096 111 11 11</a></li>
-            </ul>
+                 </ul>
+            </div>
         </div>
         
     </header>
@@ -136,7 +146,7 @@
         <h2 class="title-secon">Наша команда</h2>
           <ul class="secon__photo">
             <li class="section-title list-photo">
-                <img src="./images/work-photo-01.jpg" alt="Product" width="270">
+                <img src="./images/work-photo-01.jpg" alt="Product" width="450">
                 <div class="workers">
                      <h3 class="team-user">Ігор Дем'яненко</h3>
                      <p class="team-job">Product Designer</p>
@@ -305,8 +315,8 @@
                    <li class="icon-clients"> <a class="icon-customers" href="">
                     <svg  class="link-customers"
                     width="84" height="40">
-                <use href="./images/sprite-icon.svg#icon-yaco"></use>
-                </svg></a>
+                      <use href="./images/sprite-icon.svg#icon-yaco"></use>
+                      </svg></a>
                     </li>
                    <li class="icon-sponsors">
                     <a class="icon-customers" href="#">
@@ -358,10 +368,11 @@
    
 <!-- footer -->
     <footer class="footer">
-        <div class="container container-icon">
+    <div class="container container-icon">
+       
             <div class="container-site">
                   <a class="footer-logo" href="./index.html"><span class="accent-logo">Web</span>Studio</a>
-                <address>
+                 <address>
                   <ul class="footer-title">
                      <li class="footer-list"><a class="footer-address" href="https://www.google.com/maps/d/viewer?mid=10uSM3H-mIU3GznYo2szRIEphczw&hl=en_US&usp=sharing" target="_blank" rel="noopener nofollow noreterrer">
                   м. Київ, пр-т Лесі Українки, 26</a></li>
@@ -369,7 +380,8 @@
                      <li class="footer-list"><a class="footer-contact" href="tel:+380961111111"> +38 096 111 11 11 </a> </li>
                  </ul>
                  </address>
-         </div>
+             </div>
+             
          <div class="footer-icon">
             <p class="footer-link">приєднуйтесь</p>
             <ul class="footer-site">
@@ -394,27 +406,24 @@
                 <use href="./images/sprite-icon.svg#icon-linkedin"></use>
                 </svg></a></li>
             </ul>
-         </div>
-         <div class="footer-icon">
+          </div>
+       
+         <div class="footer-registration">
             <p class="footer-link">Підпишіться на розсилку</p>
-            <from class="footer-from">
+              <from class="footer-from">
+               
                 <input class="footer-input" type="text" name="email" id="email" placeholder="E-mail"/>
                 <label for="email"></label>
-               
+                <div class="footer-button">
                     <button type="submit" class="footer-send">Підписатися
                     <svg class="send" width="24" height="24">
                     <use href="./images/symbol-defs.svg#icon-send"></use>
                      </svg></button>
-            </from> 
-            </div>
-         
+                </div>
+              </from> 
+          </div>
         </div>
-       
-        </div>
-
-         
-        
-        
+    </div>
     </footer>
 
 
@@ -484,8 +493,18 @@
         </div>
     </div>
    
+    <!-- Мобільне меню -->
+    <div class="menu-container js-menu-container is-open" id="modal-menu">
+        <button type="button" class="button-menu js-close-menu">
+            <svg width="40" height="40"
+                aria-label="перемикач мобільного меню">
+            <use class="close" href="./images/symbol-defs.svg#icon-close"></use></svg>
+        </button>
+
+    </div>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/button.js"></script>
 </body>
 
 </html>

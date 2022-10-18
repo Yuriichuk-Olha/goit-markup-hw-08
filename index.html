@@ -13,7 +13,7 @@
      <link rel="stylesheet" href="./css/main.min.css"/>
 </head>
 
-<body>
+<body class="no-scroll">
     <header class="header">
         <div class="header-title container">
             <nav class="header-nav">
@@ -21,14 +21,13 @@
             <a href="#" class="header-logo">
                <span class="accent-logo">Web</span>Studio
             </a>
-            <button type="button" class="button-menu js-open-menu no-scroll"
-            aria-expanded="false" aria-controls="mobile-menu">
-                <svg width="40" height="40"
+          
+                <svg class="menu" width="40" height="40"
                 aria-label="перемикач мобільного меню">
-                <!-- <use class="close" href="./images/symbol-defs.svg#icon-close"></use> -->
-                <use class="menu" href="./images/symbol-defs.svg#icon-menu"></use>
+              
+                <use  href="./images/symbol-defs.svg#icon-menu"></use>
                 </svg>
-             </button>
+             
             </div>
             <div class="header-item">
               <ul class="navig-item">
@@ -37,21 +36,31 @@
                 <li class="navigation-item"><a class="navigation-link" href="#">Контакти</a> </li>
               </ul>
              </nav>
+             <div class="wrap">
                  <ul class="header-wrap">
                         <li class="wrap-contact"><a class="header-contact" href="mailto:info@devstudio.com">
-                                <svg class="svg"
-                                width="16" height="12">
+                                <svg class="svg svg-envelope">
                             <use href="./images/sprite-icon.svg#icon-envelope"></use>
                             </svg>
                             info@devstudio.com
                         </a></li>
                         <li class="wrap-contact"><a class="header-contact" href="tel:+380961111111">
-                            <svg class="svg"
-                                width="10" height="16">
+                            <svg class="svg svg-phone">
                             <use href="./images/sprite-icon.svg#icon-phone"></use>
                             </svg>
                             +38 096 111 11 11</a></li>
                  </ul>
+             </div>
+              <button type="button" class="button-menu js-open-menu" 
+                aria-expanded="false"
+                aria-controls="mobile-menu">,
+                
+                <!-- <svg width="40" height="40"
+                aria-label="перемикач мобільного меню">
+              
+                <use class="menu" href="./images/symbol-defs.svg#icon-menu"></use>
+                </svg> -->
+             </button>
             </div>
         </div>
         
@@ -500,7 +509,11 @@
                 aria-label="перемикач мобільного меню">
             <use class="close" href="./images/symbol-defs.svg#icon-close"></use></svg>
         </button>
-
+        <ul class="navig-item">
+            <li class="navigation-item active"><a class="navigation-link current" href="#">Студія</a> </li>
+            <li class="navigation-item"><a class="navigation-link" href="./portfolio.html">Портфоліо</a> </li>
+            <li class="navigation-item"><a class="navigation-link" href="#">Контакти</a> </li>
+          </ul>
     </div>
 
     <script src="./js/modal.js"></script>

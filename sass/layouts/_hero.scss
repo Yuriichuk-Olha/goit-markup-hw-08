@@ -6,24 +6,61 @@
     margin-left: auto;
     margin-right: auto;
     background-color:var(--secondary-color);
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)), url("../images/page.bg.jpg");
-   
     background-position: center;
     background-size: cover;
     text-align: center;
-    
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)),
+        url("../images/page.mobil1x.jpg");
+           
         @media screen and (min-width: 768px) {
-   
-        max-width: 1199px;
+            max-width: 1199px;
+
         }
 
         @media screen and (min-width: 1600px) {
+            width: 1600px;
             padding-top: 200px;
             padding-bottom: 200px;
             max-width: 1600px;
         }
-
 }
+
+
+@media screen and(min-width:480px) {
+            .hero-section {
+            background-image:
+            linear-gradient(rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),
+            url("../images/page.mobil2x.jpg"); 
+            }
+}
+@media screen and (min-width: 768px) {
+            .hero-section {
+          
+            background-image:
+            linear-gradient(rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),
+            url("../images/page.tab1x.jpg");
+            background-image:
+            linear-gradient(rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),
+            url("../images/page.tab2x.jpg");  
+            }
+}
+@media screen and (min-width: 1600px) {
+            .hero-section {
+            background-image:
+            linear-gradient(rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),
+            url("../images/page.deks1x.jpg"); 
+            background-image:
+            linear-gradient(rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),
+            url("../images/page.deks2x.jpg"); 
+            }
+}
+
 
 .hero__title {
     max-width: 360px;
@@ -44,20 +81,6 @@
 
 }
 
-
-// .hero__title {
-//     max-width: 696px;
-//     margin:0 auto;
-
-//     font-size: 44px;
-//     line-height: 1.36;
-//     letter-spacing: 0.06em;
-//     text-transform: uppercase;
-
-//     color:var(--primary-white-color);
-    
-// }
-
 .hero__button {
     border-radius: 4px;
     border-color: transparent;
@@ -73,7 +96,7 @@
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     color:var(--primary-white-color);
     background-color:var(--accent-text-color);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     cursor: pointer;
 
     &:hover,
@@ -83,7 +106,4 @@
 
 }   
 
-// .hero-button:hover,
-// .hero-button:focus {
-//     background-color: var(--secondary-color-hover);
-// }
+

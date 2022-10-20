@@ -1,13 +1,13 @@
  .header {
-    display: flex;
+   
      border-bottom:var(--secondary-border) 1px solid;
-    //  align-items: center;
+     align-items: center;
 }
 
 .header-title.container {
     @media screen and(nim-width:768px) {
-        display: flex;
-        justify-content: center;
+        // display: flex;
+        // justify-content: center;
     }
 }
 .header-title {
@@ -24,7 +24,7 @@
     display: flex;
     @media screen and(min-width:768px) {
     display: flex;
-    // flex-direction: row;
+
     }
 }
 .header-title.header-mobil {
@@ -32,13 +32,13 @@
    
     // flex-direction: column;
  
-        // min-height: 60px;
+     
 }
 
 .header-mobil {
     // display: flex;
     justify-content:flex-end;
-    // min-height: 60px;
+  
 }
 
 
@@ -62,7 +62,6 @@
 }
 
 .button-menu {
-    
     padding: 0;
     margin: 0;
 
@@ -72,6 +71,11 @@
     background:var(--primary-white-color);
     @media screen and(min-width:768px) {
         display: none;
+    }
+}
+@media screen and(min-width:768px) {
+    .button-menu {
+    display: none;
     }
 }
 .menu {
@@ -109,8 +113,7 @@
 .navig-item {
     display: none;
 @media screen and(min-width:768px) {
-    // .navig-item {
-        display: flex;
+           display: flex;
 
     &:nth-child(1):after .active {
         position: absolute;
@@ -126,7 +129,7 @@
 }
 .navigation-item { 
     @media screen and(min-width:768px) {
-    // .navigation-item {    
+ 
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
@@ -148,35 +151,44 @@
     @media screen and(min-width:768px) {
         display: flex; 
         flex-direction: column;
-    //    align-items: stretch;
-       margin-left: 96px;
+  
+       align-items: flex-start;
+        // margin: 21px 0;
+        justify-content: space-between;
     }
 
     @media screen and(min-width:1200px) {
         display: flex;
         margin-left: auto;
+        margin-right: 0;
         flex-direction: row;
-        gap: 50px;  
+        align-items:center;
+       
     }
 
 }
 
 .wrap-contact {
     @media screen and(min-width:768px) {
-         margin-bottom: 10px;
+        display: block;
+        gap: 10px;
     }
     @media screen and(min-width:1200px) {
         display: flex; 
+        &:not(:first-child) {
+            margin-left: 30px;
+        }
     }
-   
 }
+
 .header-contact {
     @media screen and(min-width:768px) {
    
          display: inline-flex;
          align-items: center;
          transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-   
+        
+
         font-weight: 500;
         font-size: 12px;
         line-height: 1.166;

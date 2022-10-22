@@ -1,16 +1,23 @@
-// .secon__photo {
-//     display: flex;
-//     position: relative;
-
-// }
-// .thubm {
-//     position: relative;
+.secon__photo__list {
+    display: none;
+    @media screen and(min-width:1200px) {
+        display: flex;
+        position: relative;  
+        gap:30px;
+    }
    
+
+}
+.thubm {
+    position: relative;
+   
+}
+// @media screen and(min-width:768px) {
+//     .list-photo:not(:first-child) {
+//         margin-left: 30px;
+//     }
 // }
 
-// .list-photo:not(:first-child) {
-//     margin-left: 30px;
-// }
 .label {
     position:absolute;
     left: 0;

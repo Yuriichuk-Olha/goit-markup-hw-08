@@ -9,39 +9,89 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
     rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
-     rel="stylesheet">
-    <!-- <link rel="stylesheet" href="./css/style.css"/> -->
+    rel="stylesheet">
     <link rel="stylesheet" href="./css/main.min.css"/>
+    <link rel="stylesheet" href="./js/modal.js">
 </head>
 
 <body>
     <header class="header">
         <div class="header-title container">
-        <nav class="header-nav">
+      
             <a href="./index.html" class="header-logo">
-               <span class="accent-logo">Web</span>Studio
-            </a>
+               <span class="accent-logo">Web</span>Studio</a>
+
+        <nav class="header-nav">
             <ul class="navig-item">
-                <li class="navigation-item"> <a class="navigation-link" href="./index.html">Студія</a> </li>
-                <li class="navigation-item"> <a class="navigation-link current" href="#">Портфоліо</a> </li>
-                <li class="navigation-item"> <a class="navigation-link" href="#">Контакти</a> </li>
+                <li class="navigation-item"><a class="navigation-link" href="./index.html">Студія</a></li>
+                <li class="navigation-item active"><a class="navigation-link current" href="#">Портфоліо</a></li>
+                <li class="navigation-item"><a class="navigation-link" href="#">Контакти</a></li>
             </ul>
         </nav>
       
             <ul class="header-wrap">
+
                 <li class="wrap-contact"><a class="header-contact" href="mailto:info@devstudio.com">
-                    <svg class="svg"
-                    width="16" height="12">
-                <use href="./images/sprite-icon.svg#icon-envelope"></use>
-                </svg>
-                    info@devstudio.com</a></li>
+                        <svg class="svg svg-envelope">
+                    <!-- width="16" height="12"> -->
+                         <use href="./images/sprite-icon.svg#icon-envelope"></use>
+                         </svg>
+                    info@devstudio.com
+                </a></li>
                 <li class="wrap-contact"><a class="header-contact" href="tel:+380961111111">
-                    <svg class="svg"
-                                width="10" height="16">
-                            <use href="./images/sprite-icon.svg#icon-phone"></use>
-                            </svg> 
+                        <svg class="svg svg-phone">
+                                <!-- width="10" height="16" -->
+                        <use href="./images/sprite-icon.svg#icon-phone"></use>
+                        </svg> 
                     +38 096 111 11 11</a></li>
             </ul>
+            <div class="header-mobil">
+                <button type="button" class="button-burger js-open-menu" 
+                  aria-expanded="false"
+                  aria-controls="mobile-menu">
+  
+                  <svg width="40" height="40" class="burger"
+                  aria-label="перемикач мобільного меню">
+                  <use href="./images/symbol-defs.svg#icon-menu"></use>
+                  </svg>
+               </button>
+               </div>
+        </div>
+         <!-- Мобільне меню -->
+         <div class="menu-container js-menu-container is-open"  id="mobile-menu">
+            <div class="mobil">
+            <button type="button" class="button-closee js-close-menu">
+                <svg width="24" height="16" class="closee"
+                    aria-label="перемикач мобільного меню">
+                <use href="./images/symbol-defs.svg#icon-close"></use></svg>
+            </button>
+            <ul class="mobil-menu">
+                <li class="navigation-ite"><a class="navigation-lin" href="./index.html">Студія</a> </li>
+                <li class="navigation-ite active-mobil"><a class="navigation-lin current" href="#">Портфоліо</a> </li>
+                <li class="navigation-ite"><a class="navigation-lin" href="#">Контакти</a> </li>
+              </ul>
+    
+              <ul class="mobil-menu-contact">
+                <li class="menu-contact">
+                    <a class="contact-mobil" href="tel:+380961111111">
+                    +38 096 111 11 11</a></li>
+                <li class="menu-contact">
+                    <a class="contact-mail" href="mailto:info@devstudio.com">
+                    info@devstudio.com
+                </a></li>
+              </ul>
+    
+              <ul class="mobil-menu-social">
+                <li class="mobil-soc"><a class="mobil-social strip" href="#" target="_blank"
+                    rel="noopener noreferrer">Instagram</a></li>
+                <li class="mobil-soc"><a class="mobil-social strip" href="#" target="_blank"
+                    rel="noopener noreferrer">Twitter</a></li>
+                <li class="mobil-soc"><a class="mobil-social strip" href="#" target="_blank"
+                    rel="noopener noreferrer">Facebook</a></li>
+                <li class="mobil-soc"><a class="mobil-social strip" href="#" target="_blank"
+                    rel="noopener noreferrer">LinkedIn</a></li>
+                </ul>
+            </div>
         </div>
     </header>
 
@@ -61,8 +111,29 @@
                   <li class="wrap-details-list">
                     <a class="wrap-list" href="#">
                         <div class="wrap-details">
-                            <img class="photo-user" src="./images/portfolio/people.jpg" alt="web"
-                            width="370">
+                            <picture>
+                            <source 
+                                srcset="
+                                ./images/portfolio/people-desk-1x.jpg 1x,
+                                ./images/portfolio/people-desk-2x.jpg 2x"
+                                media="(min-width:1200px)"
+                                />
+                                <source 
+                                srcset="
+                                ./images/portfolio/people-tablet-1x.jpg 1x,
+                                ./images/portfolio/people-tablet-2x.jpg 2x"
+                                media="(min-width:768px)"
+                                />
+                                <source 
+                                srcset="
+                                ./images/portfolio/people-tel-1x.jpg 1x,
+                                ./images/portfolio/people-tel-2x.jpg 2x"
+                                media="(max-width:768px)"
+                                />
+                                <img src="./images/portfolio/people-desk-1x.jpg 1x" 
+                                alt="web"/>
+                            </picture>
+                            
                             <p class="list-details">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу
                          та сервісів. Все це дозволить відвідувачу отримати 
                          вичерпні відомості про компанію чи приватну особу.</p>
@@ -76,8 +147,29 @@
                   <li class="wrap-details-list">
                     <a class="wrap-list" href="#">
                         <div class="wrap-details">
-                            <img class="photo-user" src="./images/portfolio/star.jpg" alt="Golden Star"
-                            width="370">
+                            <picture>
+                                <source 
+                                srcset="
+                                ./images/portfolio/star-desk-1x.jpg 1x,
+                                ./images/portfolio/star-desk-2x.jpg 2x"
+                                media="(min-width:1200px)"
+                                />
+                                <source 
+                                srcset="
+                                ./images/portfolio/star-tablet-1x.jpg 1x,
+                                ./images/portfolio/star-tablet-2x.jpg 2x"
+                                media="(min-width:768px)"
+                                />
+                                <source 
+                                srcset="
+                                ./images/portfolio/star-tel-1x.jpg 1x,
+                                ./images/portfolio/star-tel-2x.jpg 2x"
+                                media="(max-width:768px)"
+                                />
+                                <img src="./images/portfolio/star-desk-1x.jpg 1x" 
+                                alt="Golden Star"/>
+                            </picture>
+                          
                             <p class="list-details">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу 
                             та сервісів. Все це дозволить відвідувачу отримати
                              вичерпні відомості про компанію чи приватну особу.</p>
@@ -91,8 +183,29 @@
                   <li class="wrap-details-list">
                     <a class="wrap-list" href="#">
                         <div class="wrap-details">
-                        <img class="photo-user" src="./images/portfolio/seafood.jpg" alt="Seafood"
-                      width="370">
+                            <picture>
+                                <source 
+                                srcset="
+                                ./images/portfolio/seafood-desk-1x.jpg 1x,
+                                ./images/portfolio/seafood-desk-2x.jpg 2x"
+                                media="(min-width:1200px)"
+                                />
+                                <source 
+                                srcset="
+                                ./images/portfolio/seafood-tablet-1x.jpg 1x,
+                                ./images/portfolio/seafood-tablet-2x.jpg 2x"
+                                media="(min-width:768px)"
+                                />
+                                <source 
+                                srcset="
+                                ./images/portfolio/seafood-tel-1x.jpg 1x,
+                                ./images/portfolio/seafood-tel-2x.jpg 2x"
+                                media="(max-width:768px)"
+                                />
+                                <img src="./images/portfolio/seafood-desk-1x.jpg 1x" 
+                                alt="seafood"/>
+                            </picture>
+                        
                       <p class="list-details">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу 
                         та сервісів. Все це дозволить відвідувачу отримати
                          вичерпні відомості про компанію чи приватну особу.</p>
@@ -106,8 +219,29 @@
                  <li class="wrap-details-list">
                     <a class="wrap-list" href="#">
                         <div class="wrap-details">
-                        <img src="./images/portfolio/music.jpg" alt="Prime"
-                    width="370">
+                            <picture>
+                                <source 
+                                srcset="
+                                ./images/portfolio/music-desk-1x.jpg 1x,
+                                ./images/portfolio/music-desk-2x.jpg 2x"
+                                media="(min-width:1200px)"
+                                />
+                                <source 
+                                srcset="
+                                ./images/portfolio/music-tablet-1x.jpg 1x,
+                                ./images/portfolio/music-tablet-2x.jpg 2x"
+                                media="(min-width:768px)"
+                                />
+                                <source 
+                                srcset="
+                                ./images/portfolio/music-tel-1x.jpg 1x,
+                                ./images/portfolio/music-tel-2x.jpg 2x"
+                                media="(max-width:768px)"
+                                />
+                                <img src="./images/portfolio/music-desk-1x.jpg 1x" 
+                                alt="Prime"/>
+                            </picture> 
+                      
                     <p class="list-details">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу 
                         та сервісів. Все це дозволить відвідувачу отримати
                          вичерпні відомості про компанію чи приватну особу.</p>
@@ -120,8 +254,29 @@
                  <li class="wrap-details-list">
                       <a class="wrap-list" href="#">
                         <div class="wrap-details">
-                        <img class="photo-user" src="./images/portfolio/box.jpg" alt="Boxes"
-                        width="370">
+                            <picture>
+                                <source 
+                                srcset="
+                                ./images/portfolio/box-desk-1x.jpg 1x,
+                                ./images/portfolio/box-desk-2x.jpg 2x"
+                                media="(min-width:1200px)"
+                                />
+                                <source 
+                                srcset="
+                                ./images/portfolio/box-tablet-1x.jpg 1x,
+                                ./images/portfolio/box-tablet-2x.jpg 2x"
+                                media="(min-width:768px)"
+                                />
+                                <source 
+                                srcset="
+                                ./images/portfolio/box-tel-1x.jpg 1x,
+                                ./images/portfolio/box-tel-2x.jpg 2x"
+                                media="(max-width:768px)"
+                                />
+                                <img src="./images/portfolio/box-desk-1x.jpg 1x" 
+                                alt="Boxes"/>
+                            </picture> 
+                       
                         <p class="list-details">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу 
                             та сервісів. Все це дозволить відвідувачу отримати
                              вичерпні відомості про компанію чи приватну особу.</p>
@@ -134,8 +289,29 @@
                   <li class="wrap-details-list">
                       <a class="wrap-list" href="#">
                         <div class="wrap-details">
-                        <img class="photo-user" src="./images/portfolio/monitor.jpg" alt="Borders"
-                     width="370">
+                            <picture>
+                                <source 
+                                srcset="
+                                ./images/portfolio/monitor-desk-1x.jpg 1x,
+                                ./images/portfolio/monitor-desk-2x.jpg 2x"
+                                media="(min-width:1200px)"
+                                />
+                                <source 
+                                srcset="
+                                ./images/portfolio/monitor-tablet-1x.jpg 1x,
+                                ./images/portfolio/monitor-tablet-2x.jpg 2x"
+                                media="(min-width:768px)"
+                                />
+                                <source 
+                                srcset="
+                                ./images/portfolio/monitor-tel-1x.jpg 1x,
+                                ./images/portfolio/monitor-tel-2x.jpg 2x"
+                                media="(max-width:768px)"
+                                />
+                                <img src="./images/portfolio/monitor-desk-1x.jpg 1x" 
+                                alt="Borders"/>
+                            </picture> 
+                        
                      <p class="list-details">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу 
                         та сервісів. Все це дозволить відвідувачу отримати
                          вичерпні відомості про компанію чи приватну особу.</p>
@@ -148,8 +324,29 @@
                   <li class="wrap-details-list">
                      <a class="wrap-list" href="#">
                         <div class="wrap-details">
-                        <img class="photo-user" src="./images/portfolio/limited.jpg" alt="Limited"
-                     width="370">
+                            <picture>
+                                <source 
+                                srcset="
+                                ./images/portfolio/limited-desk-1x.jpg 1x,
+                                ./images/portfolio/limited-desk-2x.jpg 2x"
+                                media="(min-width:1200px)"
+                                />
+                                <source 
+                                srcset="
+                                ./images/portfolio/limited-tablet-1x.jpg 1x,
+                                ./images/portfolio/limited-tablet-2x.jpg 2x"
+                                media="(min-width:768px)"
+                                />
+                                <source 
+                                srcset="
+                                ./images/portfolio/limited-tel-1x.jpg 1x,
+                                ./images/portfolio/limited-tel-2x.jpg 2x"
+                                media="(max-width:768px)"
+                                />
+                                <img src="./images/portfolio/limited-desk-1x.jpg 1x" 
+                                alt="Limited"/>
+                            </picture> 
+                       
                      <p class="list-details">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу 
                         та сервісів. Все це дозволить відвідувачу отримати
                          вичерпні відомості про компанію чи приватну особу.</p>
@@ -162,8 +359,28 @@
                    <li class="wrap-details-list">
                        <a class="wrap-list">
                         <div class="wrap-details">
-                        <img class="photo-user" src="./images/portfolio/lab.jpg" alt="LAB"
-                       width="370">
+                            <picture>
+                                <source 
+                                srcset="
+                                ./images/portfolio/lab-desk-1x.jpg 1x,
+                                ./images/portfolio/lab-desk-2x.jpg 2x"
+                                media="(min-width:1200px)"
+                                />
+                                <source 
+                                srcset="
+                                ./images/portfolio/lab-tablet-1x.jpg 1x,
+                                ./images/portfolio/lab-tablet-2x.jpg 2x"
+                                media="(min-width:768px)"
+                                />
+                                <source 
+                                srcset="
+                                ./images/portfolio/lab-tel-1x.jpg 1x,
+                                ./images/portfolio/lab-tel-2x.jpg 2x"
+                                media="(max-width:768px)"
+                                />
+                                <img src="./images/portfolio/lab-desk-1x.jpg 1x" 
+                                alt="LAB"/>
+                      
                        <p class="list-details">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу 
                         та сервісів. Все це дозволить відвідувачу отримати
                          вичерпні відомості про компанію чи приватну особу.</p>
@@ -176,8 +393,29 @@
                    <li class="wrap-details-list">
                          <a class="wrap-list" href="#">
                             <div class="wrap-details">
-                            <img class="photo-user" src="./images/portfolio/business.jpg" alt="Business"
-                         width="370">
+                                <picture>
+                                    <source 
+                                    srcset="
+                                    ./images/portfolio/business-desk-1x.jpg 1x,
+                                    ./images/portfolio/business-desk-2x.jpg 2x"
+                                    media="(min-width:1200px)"
+                                    />
+                                    <source 
+                                    srcset="
+                                    ./images/portfolio/business-tablet-1x.jpg 1x,
+                                    ./images/portfolio/business-tablet-2x.jpg 2x"
+                                    media="(min-width:768px)"
+                                    />
+                                    <source 
+                                    srcset="
+                                    ./images/portfolio/business-tel-1x.jpg 1x,
+                                    ./images/portfolio/business-tel-2x.jpg 2x"
+                                    media="(max-width:768px)"
+                                    />
+                                    <img src="./images/portfolio/business-desk-1x.jpg 1x" 
+                                    alt="Business"/>
+                                </picture> 
+                        
                          <p class="list-details">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу 
                             та сервісів. Все це дозволить відвідувачу отримати
                              вичерпні відомості про компанію чи приватну особу.</p>
@@ -195,6 +433,7 @@
         <!-- footer -->
     <footer class="footer">
         <div class="container container-icon">
+
             <div class="container-site">
                   <a class="footer-logo" href="./index.html"><span class="accent-logo">Web</span>Studio</a>
                 <address>
@@ -206,6 +445,7 @@
                  </ul>
                  </address>
          </div>
+
          <div class="footer-icon">
             <p class="footer-link">приєднуйтесь</p>
             <ul class="footer-site">
@@ -231,22 +471,27 @@
                 </svg></a> </li>
             </ul>
          </div>
-         ¨
-         <div class="footer-icon">
+
+         <div class="footer-registration">
             <p class="footer-link">Підпишіться на розсилку</p>
             <from class="footer-from">
+
                 <input class="footer-input" type="text" name="email" id="email" placeholder="E-mail"/>
                 <label for="email"></label>
-               
+                <div class="footer-button">
                     <button type="submit" class="footer-send">Підписатися
                     <svg class="send" width="24" height="24">
                     <use href="./images/symbol-defs.svg#icon-send"></use>
                      </svg></button>
+                </div>
             </from> 
             </div>
 
         </div>
     </footer>
+
+    <script src="./js/modal.js"></script>
+    <script src="./js/button.js"></script>
 </body>
 
 </html>

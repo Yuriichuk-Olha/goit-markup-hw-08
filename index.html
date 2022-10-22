@@ -11,9 +11,11 @@
      <link href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
      rel="stylesheet">
      <link rel="stylesheet" href="./css/main.min.css"/>
+     <link rel="stylesheet" href="./js/modal.js"/>
+     <link rel="stylesheet" href="./js/button.js"/>
 </head>
 
-<body class="no-scroll">
+<body class="#">
     <header class="header">
         <div class="header-title container">
   
@@ -27,7 +29,9 @@
                 <li class="navigation-item"><a class="navigation-link" href="#">Контакти</a> </li>
               </ul>
              </nav>
+
                  <ul class="header-wrap">
+
                         <li class="wrap-contact"><a class="header-contact" href="mailto:info@devstudio.com">
                             <svg class="svg svg-envelope">
                             <use href="./images/sprite-icon.svg#icon-envelope"></use>
@@ -41,17 +45,52 @@
                             +38 096 111 11 11</a></li>
                  </ul>
              <div class="header-mobil">
-              <button type="button" class="button-menu js-open-menu" 
+              <button type="button" class="button-burger js-open-menu" 
                 aria-expanded="false"
                 aria-controls="mobile-menu">
 
-                <svg width="40" height="40"
+                <svg width="40" height="40" class="burger"
                 aria-label="перемикач мобільного меню">
-                <use class="menu" href="./images/symbol-defs.svg#icon-menu"></use>
+                <use href="./images/symbol-defs.svg#icon-menu"></use>
                 </svg>
              </button>
+             </div>
+        </div>
+         <!-- Мобільне меню -->
+         <div class="menu-container js-menu-container is-open"  id="mobile-menu">
+            <div class="mobil">
+            <button type="button" class="button-closee js-close-menu">
+                <svg width="24" height="16" class="closee"
+                    aria-label="перемикач мобільного меню">
+                <use href="./images/symbol-defs.svg#icon-close"></use></svg>
+            </button>
+            <ul class="mobil-menu">
+                <li class="navigation-ite active-mobil"><a class="navigation-lin current" href="#">Студія</a> </li>
+                <li class="navigation-ite"><a class="navigation-lin" href="./portfolio.html">Портфоліо</a> </li>
+                <li class="navigation-ite"><a class="navigation-lin" href="#">Контакти</a> </li>
+              </ul>
+    
+              <ul class="mobil-menu-contact">
+                <li class="menu-contact">
+                    <a class="contact-mobil" href="tel:+380961111111">
+                    +38 096 111 11 11</a></li>
+                <li class="menu-contact">
+                    <a class="contact-mail" href="mailto:info@devstudio.com">
+                    info@devstudio.com
+                </a></li>
+              </ul>
+    
+              <ul class="mobil-menu-social">
+                <li class="mobil-soc"><a class="mobil-social strip" href="#" target="_blank"
+                    rel="noopener noreferrer">Instagram</a></li>
+                <li class="mobil-soc"><a class="mobil-social strip" href="#" target="_blank"
+                    rel="noopener noreferrer">Twitter</a></li>
+                <li class="mobil-soc"><a class="mobil-social strip" href="#" target="_blank"
+                    rel="noopener noreferrer">Facebook</a></li>
+                <li class="mobil-soc"><a class="mobil-social strip" href="#" target="_blank"
+                    rel="noopener noreferrer">LinkedIn</a></li>
+                </ul>
             </div>
-            <!-- </div> -->
         </div>
         
     </header>
@@ -74,8 +113,10 @@
             <ul class="benefits__post">
                 <li class="post__icon">
                     <div class="post__title">
+
                         <svg class="icon-list" width="70" height="70">
                         <use href="./images/sprite-icon.svg#icon-antena"></use></svg>
+
                     </div>
                     <h3 class="benefits__title">УВАГА ДО ДЕТАЛЕЙ</h3>
                     <p class="benefits__description">Ідейні міркування, і навіть початок повсякденної роботи з формування позиції.</p>
@@ -119,17 +160,46 @@
           <section class="secon">
             <div class="container">
              <h2 class="title-secon">Чим ми займаємося</h2>
-             <ul class="secon__photo">
+             <ul class="secon__photo__list">
                 <li class="list-photo thumb">
-                <img src="./images/img1.jpg" alt="працює над схемою" width="370"/>
+                        <picture>
+                            <source 
+                            srcset="
+                            ./images/img1desk-1x.jpg 1x,
+                            ./images/img1desk-2x.jpg 2x"
+                            media="(min-width:1200px)"
+                            />
+                            <img src="./images/img1deks-1x.jpg 1x" 
+                            alt="працює над схемою"/>
+                        </picture>
                 <p class="label">Десктопні додатки</p>
                 </li>
                 <li class="list-photo thubm">
-                <img src="./images/img2.jpg" alt="створює програму" width="370"/>
+                    <picture>
+                        <source 
+                        srcset="
+                        ./images/img2desk-1x.jpg 1x,
+                        ./images/img2desk-2x.jpg 2x"
+                        media="(min-width:1200px)"
+                        />
+                        <img src="./images/img2deks-1x.jpg 1x" 
+                        alt="створює програму"/>
+                    </picture>
+                
+
                 <p class="label">Мобільні додатки</p>
                 </li>
                 <li class="list-photo thubm">
-                <img src="./images/img3.jpg" alt="дизайнер" width="370"/>
+                    <picture>
+                        <source 
+                        srcset="
+                        ./images/img3desk-1x.jpg 1x,
+                        ./images/img3desk-2x.jpg 2x"
+                        media="(min-width:1200px)"
+                        />
+                        <img src="./images/img3deks-1x.jpg 1x" 
+                        alt="дизайнер"/>
+                    </picture>
                 <p class="label">Дизайнерські рішення</p>
                 </li>
           </ul>
@@ -145,7 +215,28 @@
         <h2 class="title-secon">Наша команда</h2>
           <ul class="secon__photo">
             <li class="section-title list-photo">
-                <img src="./images/work-photo-01.jpg" alt="Product" width="450">
+                <picture>
+                    <source 
+                    srcset="
+                    ./images/team/work-1-deks-1x.jpg 1x,
+                    ./images/team/work-1-deks-2x.jpg 2x"
+                    media="(min-width:1200px)"
+                    />
+                    <source 
+                    srcset="
+                    ./images/team/work-1-tablet-1x.jpg 1x,
+                    ./images/team/work-1-tablet-2x.jpg 2x"
+                    media="(min-width:768px)"
+                    />
+                    <source 
+                    srcset="
+                    ./images/team/work-1-tel-1x.jpg 1x,
+                    ./images/team/work-1-tel-2x.jpg 2x"
+                    media="(max-width:768px)"
+                    />
+                    <img class="list-work" src="./images/team/work-1-deks-1x.jpg" 
+                     alt="Product" width="354">
+                 </picture>
                 <div class="workers">
                      <h3 class="team-user">Ігор Дем'яненко</h3>
                      <p class="team-job">Product Designer</p>
@@ -185,7 +276,28 @@
                  </div>
             </li>
             <li class="section-title list-photo">
-                <img src="./images/work-photo-02.jpg" alt="Frontend" width="270">
+                <picture>
+                    <source 
+                    srcset="
+                    ./images/team/work-2-desk-1x.jpg 1x,
+                    ./images/team/work-2-desk-2x.jpg 2x"
+                    media="(min-width:1200px)"
+                    />
+                    <source 
+                    srcset="
+                    ./images/team/work-2-tablet-1x.jpg 1x,
+                    ./images/team/work-2-tablet-2x.jpg 2x"
+                    media="(min-width:768px)"
+                    />
+                    <source 
+                    srcset="
+                    ./images/team/work-2-tel-1x.jpg 1x,
+                    ./images/team/work-2-tel-2x.jpg 2x"
+                    media="(max-width:768px)"
+                    />
+                    <img src="./images/team/work-2-desk-1x.jpg" 
+                     alt="Frontend">
+                 </picture>
                 <div class="workers">
                      <h3 class="team-user">Ольга Рєпіна</h3>
                      <p class="team-job">Frontend Developer</p>
@@ -223,7 +335,28 @@
                     </ul>
                 </div>
             <li class="section-title list-photo">
-                <img src="./images/work-photo-03.jpg" alt="Frontend" width="270">
+                <picture>
+                    <source 
+                    srcset="
+                    ./images/team/work-3-desk-1x.jpg 1x,
+                    ./images/team/work-3-desk-2x.jpg 2x"
+                    media="(min-width:1200px)"
+                    />
+                    <source 
+                    srcset="
+                    ./images/team/work-3-tablet-1x.jpg 1x,
+                    ./images/team/work-3-tablet-2x.jpg 2x"
+                    media="(min-width:768px)"
+                    />
+                    <source 
+                    srcset="
+                    ./images/team/work-3-tel-1x.jpg 1x,
+                    ./images/team/work-3-tel-2x.jpg 2x"
+                    media="(max-width:768px)"
+                    />
+                    <img src="./images/team/work-3-desk-1x.jpg" 
+                     alt="Marketing">
+                 </picture>
                 <div class="workers">
                      <h3 class="team-user">Микола Тарасов</h3>
                       <p class="team-job">Marketing</p>
@@ -262,7 +395,29 @@
                  </div>
             </li>
             <li class="section-title list-photo">
-                <img src="./images/work-photo-04.jpg" alt="Designer" width="270">
+                <picture>
+                    <source 
+                    srcset="
+                    ./images/team/work-4-desk-1x.jpg 1x,
+                    ./images/team/work-4-desk-2x.jpg 2x"
+                    media="(min-width:1200px)"
+                    />
+                    <source 
+                    srcset="
+                    ./images/team/work-4-tablet-1x.jpg 1x,
+                    ./images/team/work-4-tablet-2x.jpg 2x"
+                    media="(min-width:768px)"
+                    />
+                    <source 
+                    srcset="
+                    ./images/team/work-4-tel-1x.jpg 1x,
+                    ./images/team/work-4-tel-2x.jpg 2x"
+                    media="(max-width:768px)"
+                    />
+                    <img src="./images/team/work-4-desk-1x.jpg" 
+                     alt="Designer">
+                 </picture>
+               
                 <div class="workers">
                       <h3 class="team-user">Михайло Єрмаков</h3>
                      <p class="team-job">UI Designer</p>
@@ -492,20 +647,6 @@
         </div>
     </div>
    
-    <!-- Мобільне меню -->
-    <div class="menu-container js-menu-container is-open"  id="mobile-menu"0>
-        <button type="button" class="button-menu js-close-menu">
-            <svg width="40" height="40"
-                aria-label="перемикач мобільного меню">
-            <use class="close" href="./images/symbol-defs.svg#icon-close"></use></svg>
-        </button>
-        <ul class="mobile-menu">
-            <li class="navigation-item active"><a class="navigation-link current" href="#">Студія</a> </li>
-            <li class="navigation-item"><a class="navigation-link" href="./portfolio.html">Портфоліо</a> </li>
-            <li class="navigation-item"><a class="navigation-link" href="#">Контакти</a> </li>
-          </ul>
-    </div>
-
     <script src="./js/modal.js"></script>
     <script src="./js/button.js"></script>
 </body>

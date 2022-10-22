@@ -1,15 +1,15 @@
  .header {
-   
-     border-bottom:var(--secondary-border) 1px solid;
-     align-items: center;
+    position: relative;
+    border-bottom:var(--secondary-border) 1px solid;
+    align-items: center;
 }
 
-.header-title.container {
-    @media screen and(nim-width:768px) {
-        // display: flex;
-        // justify-content: center;
-    }
-}
+// .header-title.container {
+//     @media screen and(nim-width:768px) {
+//         // display: flex;
+//         // justify-content: center;
+//     }
+// }
 .header-title {
     display: flex;
     justify-content: space-between;
@@ -29,19 +29,11 @@
 }
 .header-title.header-mobil {
     display: flex;
-   
-    // flex-direction: column;
- 
-     
 }
 
 .header-mobil {
-    // display: flex;
-    justify-content:flex-end;
-  
+    justify-content:flex-end; 
 }
-
-
 .header-logo {
     font-family: "raleway", sans-serif;
     font-weight: 700;
@@ -56,12 +48,13 @@
         margin-right: 93px;
     }
 }
-
 .accent-logo {
     color: var(--accent-text-color);
 }
 
-.button-menu {
+
+
+.button-burger {
     padding: 0;
     margin: 0;
 
@@ -69,30 +62,33 @@
     border: none;
     border-radius: 50%;
     background:var(--primary-white-color);
+    cursor: pointer;
+    outline: none;
     @media screen and(min-width:768px) {
         display: none;
     }
 }
 @media screen and(min-width:768px) {
-    .button-menu {
+    .button-burger {
     display: none;
     }
 }
-.menu {
-    @media screen and(min-width:768px) {
-        display: none;
-    }
+
+.button-burger:focus svg, 
+.button-burger:hover svg {
+    fill: var(--accent-text-color);   
 }
 
-.button-menu .close {
-    display:block;
-}
-.button-menu.js-open-menu .close {
-    display: block;
-}
-.button-menu.js-open-menu .menu {
-   display: block;
-}
+
+// .button-burger .closee {
+//     display:block;
+// }
+// .button-burger.js-open-menu .closee {
+//     display: none;
+// }
+// .button-burger.js-close-menu .burger {
+//    display: block;
+// }
 
 
 .header-logo, .navig-item, .header-wrap {
@@ -205,11 +201,18 @@
         justify-content: center;
         }
 
-        &:hover,
-         &:focus {
-        fill: var(--accent-text-color);
-        color: var(--accent-text-color);
+        @media screen and(min-width:768px) {
+            &:hover,
+            &:focus {
+            fill: var(--accent-text-color);
+            color: var(--accent-text-color);
+            }
         }
+        // &:hover,
+        // &:focus {
+        // fill: var(--accent-text-color);
+        // color: var(--accent-text-color);
+        // }
 
         @media screen and(min-width:1200px) {
             padding-top: 32px;

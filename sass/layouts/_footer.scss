@@ -155,10 +155,17 @@
     color:var(--primary-white-color);
 }
 
-.site-navigation:hover, 
-.site-navigation:focus {
+@media screen and(min-width:768px) {
+    .site-navigation:hover, 
+    .site-navigation:focus {
     background-color:var(--accent-text-color);
+    }  
 }
+
+// .site-navigation:hover, 
+// .site-navigation:focus {
+//     background-color:var(--accent-text-color);
+// }
 
 .footer-site {
     display: flex;

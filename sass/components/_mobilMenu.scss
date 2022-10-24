@@ -85,7 +85,7 @@
     color:var(--accent-text-color);
 }
 .navigation-lin {
-    //  gap: 33px;
+   
     font-weight: 500;
     font-size: 40px;
     line-height: 1.175;
@@ -125,6 +125,7 @@
 
 .mobil-menu-social {
     display: flex;
+    text-align: center;
     gap: 20px;
 }
 
@@ -137,8 +138,14 @@
     letter-spacing: 0.02em;
     color:var(--accent-text-color);
 }
-
+.mobil-soc {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 .mobil-social.strip {
+    display: contents;
+    align-items: center;
     &::after {
     position: absolute;
     content: "";

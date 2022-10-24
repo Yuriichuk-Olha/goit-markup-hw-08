@@ -1,22 +1,16 @@
 .secon__photo__list {
-    display: none;
+    
     @media screen and(min-width:1200px) {
         display: flex;
-        position: relative;  
+        justify-content: center;
         gap:30px;
     }
-   
+}
 
-}
-.thubm {
+.list-photo {
     position: relative;
-   
 }
-// @media screen and(min-width:768px) {
-//     .list-photo:not(:first-child) {
-//         margin-left: 30px;
-//     }
-// }
+
 
 .label {
     position:absolute;

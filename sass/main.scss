@@ -1,8 +1,11 @@
+
+//    BASE
 @import "./base/variables";
 @import "./base/utils";
-@import "./base/mixin";
+
+@import "./base/container";
 @import "./base/common";
-@import "./base/conteiner";
+
 
 // Layouts
 @import "./layouts/header";

@@ -10,6 +10,7 @@
 }
 
 .navigation-button {
+    width: 326px;
     display: flex;
     flex-wrap: wrap;
    
@@ -17,7 +18,7 @@
     margin-bottom: 40px;
     @media screen and(min-width: 768px) {
       
-       
+        width: auto;
         justify-content: center;
         flex-wrap: wrap;
         margin-bottom: 30px;

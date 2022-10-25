@@ -21,10 +21,10 @@
 
 .header-nav {
     display: flex;
-    @media screen and(min-width:768px) {
-    padding-top: 32px;
-    padding-bottom: 32px;
-    }
+    // @media screen and(min-width:768px) {
+    // padding-top: 32px;
+    // padding-bottom: 32px;
+    // }
 }
 
 .header-title.header-mobil {
@@ -32,8 +32,12 @@
 }
 
 .header-mobil {
-    // justify-content:flex-end; 
-    margin-left: auto;
+    // margin-left: auto;
+    @media screen and(min-width:768px) {
+        display: none;
+    }
+    justify-content:flex-end; 
+   
 }
 
 .header-logo {
@@ -109,6 +113,7 @@
     }
     }
 }
+
 .navigation-item { 
     @media screen and(min-width:768px) {
  
@@ -122,29 +127,36 @@
     }
 }
 
+.navigation-link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
 .header-wrap {
     display: none;
     @media screen and(min-width:768px) {
         display: flex; 
         flex-direction: column;
         margin-left: auto;
+        gap:10px;
     }
 
     @media screen and(min-width:1200px) {
         display: flex;
         flex-direction: row;
         align-items:center;
+        gap:0;
     }
-
 }
 
 .wrap-contact {
     @media screen and(min-width:768px) {
         display: block;
-        gap: 10px;
+      
     }
     @media screen and(min-width:1200px) {
         display: flex; 
+     
         &:not(:first-child) {
             margin-left: 30px;
         }
@@ -165,7 +177,7 @@
         letter-spacing: 0.02em;
          color:var(--secondary-text-color);
 
-         &::before {
+        &::before {
         content: "";
         display: inline-flex;
         width: 12px;

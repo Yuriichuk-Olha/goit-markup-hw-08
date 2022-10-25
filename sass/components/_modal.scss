@@ -18,8 +18,8 @@
 
 
 .modal {
-    padding: 40px 40px;
-
+    position: absolute;
+    padding: 20px;
 
     fill:var(--primary-text-color);
     background-color:var(--primary-white-color);
@@ -29,8 +29,14 @@
     top: 60%;
     left: 50%;
     transform: translate(-50%,-50%);
-    max-width: 450px;
+    width: 290px;
+    min-height: 590px;
+
+    @media screen and(min-width:480px) {
+        padding: 40px;
+        width: 450px;
     min-height: 609px;
+    }
 
     @media screen and(min-width:768px) {
         position: absolute;
@@ -153,7 +159,7 @@ color: var(--primary-text-color);
 }
 .modal-element textarea {
     height: 120px;
-    width: 350px;
+    width: 250px;
     padding: 12px 16px;
    
     background: var(--primary-white-color);
@@ -162,6 +168,9 @@ color: var(--primary-text-color);
     cursor: pointer;
     resize: none;
     outline: none;
+    @media screen and(min-width:480px) {
+        width: 370px;
+    }
 
     @media screen and(min-width:768px) {
         width: 370px;
@@ -215,13 +224,16 @@ color: var(--primary-text-color);
     border: 2px solid var(--accent-text-color);
 }
 
-.policy {
-    margin-left: 5px;
-    text-decoration-line: underline;
-    color: var(--accent-text-color);
-}
+// .policy {
+//     // margin-left: 5px;
+//     // text-decoration-line: underline;
+//     // color: var(--accent-text-color);
+// }
 .policy-link {
+    // margin-left: 5px;
     color:var(--accent-text-color);
+    text-decoration-line: underline;
+   
 }
 .from-button {
     display: flex;

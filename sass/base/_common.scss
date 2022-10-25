@@ -23,7 +23,12 @@
         padding-top: 94px;
     }
 }
-   
+.benefits {
+    padding-bottom: 60px;
+    @media screen and(min-width:1200px) {
+        padding-bottom: 0;
+    }
+}
 .section-job,.customers {
     padding-bottom: 60px;
 

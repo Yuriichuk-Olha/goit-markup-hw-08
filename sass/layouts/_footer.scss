@@ -12,7 +12,6 @@
     display: inline-flex;
     flex-wrap: wrap;
     justify-content: center;
-
     align-items: baseline;
   }
   @media screen and(min-width:1200px) {
@@ -22,11 +21,15 @@
 }
 
 .container-site {
+  display: flex;
+   flex-direction: column;
   margin-bottom: 60px;
   @media screen and(min-width:768px) {
     max-width: 1199px;
-    // margin-right: 165px;
-    width: 50%;
+   margin-right: 165px;
+   display: flex;
+   flex-direction: column;
+ 
   }
   @media screen and(min-width:1200px) {
     margin-right: 70px;
@@ -38,9 +41,7 @@
 }
 
 .footer-logo {
-  display: flex;
-  justify-content: center;
-
+  text-align: center;
   font-family: "raleway";
   font-weight: 700;
   font-size: 26px;
@@ -156,8 +157,8 @@
 }
 
 .site-navigation:hover,
-:focus {
-  background-color: var(--accent-text-color);
+.site-navigation:focus {
+   color: var(--accent-text-color);
 }
 
 .site {
@@ -174,14 +175,18 @@
 .footer-site {
   display: flex;
   justify-content: center;
-  //   gap: 10px;
+  
+    gap: 10px;
   @media screen and(min-width:768px) {
     justify-content: normal;
   }
 }
 .footer-navigation {
   display: flex;
-  flex-basis: calc((100%-30px) / 3);
+  @media screen and(min-width:1200px) {
+    flex-basis: calc((100% - 3 * 10px) / 3);
+  }
+ 
 }
 
 // Підпишіться на розсилку
@@ -208,8 +213,7 @@
 .footer-input {
   height: 50px;
   width: 450px;
-  margin-right: 12px;
-
+ 
   background: var(--primary-background-color);
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -222,6 +226,7 @@
 
   @media screen and(min-width: 1200px) {
     width: 358px;
+    margin-right: 12px;
   }
 }
 

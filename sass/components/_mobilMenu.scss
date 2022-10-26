@@ -9,6 +9,7 @@
     transition:transform 250ms ease-in-out;
     transform: translateX(100%);
     overflow-y: scroll;
+    z-index: 999;
   
    @media screen and(min-width:768px) {
     display: none;
@@ -85,7 +86,7 @@
     gap:33px
 }
 
-.active {
+.navigation-lin.active {
     color:var(--accent-text-color);
 }
 .navigation-lin {
@@ -95,6 +96,7 @@
     line-height: 1.175;
     text-align: center;
     letter-spacing: 0.02em;
+    background-color: var(--primary-white-color);
     color:var(--primary-text-color);
  
     &:hover {

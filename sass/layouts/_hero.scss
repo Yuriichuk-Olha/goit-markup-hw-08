@@ -14,21 +14,17 @@
     
     url("../images/page.mobil1x.jpg");
 
-}
-.hero-section {
-    @media screen and(mim-width:480px) {
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
 
-        @media (min-device-pixel-ratio: 2),
-        (min-resolution: 192dpi),
-        (min-resolution: 2dppx) {
-
-            background-image:
-            linear-gradient(rgba(47, 48, 58, 0.4),
-            rgba(47, 48, 58, 0.4)),
-            url("../images/page.mobil2x.jpg");
-            }
+        background-image:
+        linear-gradient(rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)),
+        url("../images/page.mobil2x.jpg");
         }
 }
+
 .hero-section {
     @media screen and(min-width:768px) {
             
@@ -53,20 +49,18 @@
                     padding-top: 200px;
                     padding-bottom: 200px;
         
-                    
                     background-image:
                     linear-gradient(rgba(47, 48, 58, 0.4),
                     rgba(47, 48, 58, 0.4)),
-                    url("../images/page.deks1x.jpg");  
+                    url("../images/page.desk1x.jpg");  
                     
-        
                     @media (min-device-pixel-ratio: 2),
                     (min-resolution: 192dpi),
                     (min-resolution: 2dppx) {
                     background-image:
                     linear-gradient(rgba(47, 48, 58, 0.4),
                     rgba(47, 48, 58, 0.4)),
-                    url("../images/page.deks2x.jpg");
+                    url("../images/page.desk2x.jpg");
                     }
             }
 }

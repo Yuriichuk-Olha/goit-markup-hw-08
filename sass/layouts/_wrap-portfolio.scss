@@ -6,7 +6,6 @@
  
   @media screen and(min-width:768px) {
      
-      // max-width: 1199px;
   }
   @media screen and(min-width:1200px) {
     
@@ -23,11 +22,13 @@
     flex-basis: calc((100% - 60px) / 3);
   }
 }
-
-.wrap-details:hover>.list-details,
-.wrap-details:hover>.list-details,
-.wrap-details:focus>.list-details,
-.wrap-details:focus>.list-details {
+// .wrap-details:focus>.list-details {
+//   transform: translateY(0);
+// }
+.wrap-list:hover>.list-details,
+.wrap-list:hover>.list-details,
+.wrap-list:focus>.list-details,
+.wrap-list:focus>.list-details {
   transform: translateY(0);
 }
 

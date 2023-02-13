@@ -1632,10 +1632,10 @@ a {
   }
 }
 
-.wrap-details:hover > .list-details,
-.wrap-details:hover > .list-details,
-.wrap-details:focus > .list-details,
-.wrap-details:focus > .list-details {
+.wrap-list:hover > .list-details,
+.wrap-list:hover > .list-details,
+.wrap-list:focus > .list-details,
+.wrap-list:focus > .list-details {
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
